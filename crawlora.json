@@ -1,15 +1,20 @@
 {
-    "env":{
-        "key":"value"
-    },
-    "entrypoint": "./.dist/index.js",
-    "function": "default",
-    "screenshot_files": ["./assets/screenshot_1.png,./assets/screenshot_2.png,./assets/screenshot_3.png,./assets/screenshot_4.png"],
-    "logo_file": "./assets/logo.png",
-    "banner_file": "./assets/banner.png",
-    "title": "Tipico's Sports Data",
-    "short_description": "Get basketball games data for germany(bbl) and australia(nbl) league",
-    "version":"1.0.0",
-    "documentation_file": "./documentation.md",
-    "input_file": "./input.json"
+  "env": {
+    "key": "value"
+  },
+  "entrypoint": "./.dist/index.js",
+  "function": "default",
+  "screenshot_files": [
+    "./assets/screenshot_1.png",
+    "./assets/screenshot_2.png",
+    "./assets/screenshot_3.png",
+    "./assets/screenshot_4.png"
+  ],
+  "logo_file": "./assets/logo.png",
+  "banner_file": "./assets/banner.png",
+  "title": "Tipico's Sports Data",
+  "short_description": "Get basketball games data for germany(bbl) and australia(nbl) league",
+  "version": "1.0.0",
+  "documentation_file": "./documentation.md",
+  "input_file": "./input.json"
 }
