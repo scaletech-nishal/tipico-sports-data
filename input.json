@@ -2,11 +2,11 @@
     {
         "type": "textarea",
         "datatype": "string",
-        "placeholder": "Enter search keywords per line",
-        "default": "crawlora",
-        "label": "Google searchs",
+        "placeholder": "Enter valid urls per line",
+        "default": "https://sports.tipico.de/en/all/basketball/germany/bbl\nhttps://sports.tipico.de/en/all/basketball/australia/nbl",
+        "label": "Urls",
         "regex": "/^.*$/",
         "required": true,
-        "name": "searches"
+        "name": "input"
       }
 ]
