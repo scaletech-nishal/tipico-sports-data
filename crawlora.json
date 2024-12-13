@@ -1,6 +1,5 @@
 {
   "env": {
-    "key": "value"
   },
   "entrypoint": "./.dist/index.js",
   "function": "default",
