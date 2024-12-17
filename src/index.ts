@@ -14,8 +14,8 @@ interface EventData {
 
 export default async function ({ input }: { input: string }) {
   const urls = input.trim()
-  .split("\n")
-  .map((v) => v.trim());
+    .split("\n")
+    .map((v) => v.trim());
   for (const url of urls) {
     await browser(
       async ({ page, wait, output, debug }) => {
@@ -136,3 +136,5 @@ export default async function ({ input }: { input: string }) {
     );
   }
 }
+
+//to-do if no match data is available then handel accordingly 

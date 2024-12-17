@@ -16,6 +16,5 @@
   "short_description": "Get basketball games data for germany(bbl) and australia(nbl) league",
   "version": "1.0.0",
   "documentation_file": "./documentation.md",
-  "input_file": "./input.json",
-  "app_id": "769569ef-7741-4446-94a1-26ac6909b890"
+  "input_file": "./input.json"
 }
