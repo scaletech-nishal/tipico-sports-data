@@ -7,6 +7,6 @@
         "label": "Urls",
         "regex": "/^.*$/",
         "required": true,
-        "name": "input"
+        "name": "urls"
       }
 ]

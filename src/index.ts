@@ -12,11 +12,11 @@ interface EventData {
   odds2?: string;
 }
 
-export default async function ({ input }: { input: string }) {
-  const urls = input.trim()
+export default async function ({ urls }: { urls: string }) {
+  const urlsData = urls.trim()
     .split("\n")
     .map((v) => v.trim());
-  for (const url of urls) {
+  for (const url of urlsData) {
     await browser(
       async ({ page, wait, output, debug }) => {
         try {
