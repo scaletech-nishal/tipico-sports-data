@@ -1,7 +1,5 @@
 {
-  "env": {
-    "key": "value"
-  },
+  "env": {},
   "entrypoint": "./.dist/index.js",
   "function": "default",
   "screenshot_files": [
