@@ -1,5 +1,5 @@
 {
-  "name": "google-links-scrapper",
+  "name": "Tipico's Sports Data",
   "version": "1.0.0",
   "main": ".dist/index.js",
   "module": "CommanJs",
