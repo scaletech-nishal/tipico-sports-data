@@ -16,6 +16,8 @@ export default async function ({ urls }: { urls: string }) {
   const formedData = urls.trim().split("\n").map((v) => v.trim());
 
   await windows(formedData, async (url, { page, wait, output, debug }) => {
+    debug(`formedData: ${formedData}`);
+
     try {
       await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
       page.setDefaultNavigationTimeout(60000);
@@ -32,6 +34,8 @@ export default async function ({ urls }: { urls: string }) {
         (element) => element.textContent?.trim() || ""
       );
 
+      debug(`countryAndLeagueData: ${countryAndLeagueData}`);
+
       const events: EventData[] = await page.$$eval(
         ".SportsCompetitionsEvents-styles-module-competitions-events-block",
         (blocks, countryAndLeague) => {
@@ -45,7 +49,7 @@ export default async function ({ urls }: { urls: string }) {
                   "EventDateHeader-styles-module-event-date-header"
                 )
               ) {
-                const dayHeader = child.textContent?.trim();
+                const dayHeader = child?.textContent?.trim();
                 const match = dayHeader?.match(/(\d{1,2})\.(\d{1,2})/);
 
                 if (match) {
@@ -84,12 +88,12 @@ export default async function ({ urls }: { urls: string }) {
                   child.querySelectorAll<HTMLSpanElement>(
                     ".EventOddButton-styles-module-odd-button span"
                   )
-                ).map((span) => span.textContent?.trim());
+                ).map((span) => span?.textContent?.trim());
 
                 if (currentDate && countryAndLeague) {
                   const [country, league] = countryAndLeague
                     .split("/")
-                    .map((s) => s.trim());
+                    .map((s) => s?.trim());
                   result.push({
                     date: currentDate,
                     country,
